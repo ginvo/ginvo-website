@@ -1,0 +1,35 @@
+@use 'animations' as *
+@use 'fonts' as *
+@use 'breakpoints' as *
+
+//	==========================================================================
+	3. General - Setting up some base styles
+
+html
+	+transition
+	scroll-behavior: smooth
+body
+	padding: 0
+	margin: 0 auto
+ul, figure, p, h1
+	margin: 0
+	padding: 0
+a
+	text-decoration: none
+button
+	cursor: pointer
+	border-width: 0
+	border-style: none
+	border-color: transparent
+	box-sizing: content-box
+	&:focus
+		outline: none
+h1
+	+text-style-h1
+
+h2
+	+text-style-h2
+
+h3
+	margin: 0
+	+text-style-title

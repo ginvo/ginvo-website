@@ -1,0 +1,45 @@
+@use '../../styles/tokens' as *
+    
+.hero-content
+	width: 100%
+	padding: 10em 0 //de 14px
+	display: grid
+	grid-auto-flow: row
+	row-gap: 6em //de 14
+	justify-items: center
+	+breakpoint-mobile
+		margin-top: 2em
+.hero-group-texts
+	text-align: center
+	display: grid
+	grid-auto-flow: row
+	row-gap: 3em //de 14
+	// +breakpoint-tablet // Legacy
+	// 	width: 90%
+	// +breakpoint-mobile
+	// 	width: 100%
+	// 	text-align: left
+	// 	row-gap: 1.5em
+.hero-group-buttons
+	display: grid
+	grid-auto-flow: column
+	column-gap: .75em
+	+breakpoint-mobile
+		width: 100%
+		grid-auto-flow: row
+		row-gap: .75em
+.hero-title
+	margin: 0 auto
+	color: var(--color-text-title)
+	@include text-style-h1
+	&-color
+		color: var(--color-text-title-high)
+	+breakpoint-mobile
+		+text-style-h1-small
+.hero-description
+	max-width: 520px
+	margin: 0 auto
+	+text-style-body
+	color: var(--color-text-body-bg)
+	+breakpoint-mobile
+		max-width: 260px

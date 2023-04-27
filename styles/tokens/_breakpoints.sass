@@ -1,0 +1,18 @@
+//	2.2 breakpoints - Sets mixins for different screen breakpoints for devices
+	min is from
+	max es to
+
+//	Smaller than 1024px (Laptop)
+=breakpoint-laptop
+	@media ( max-width: 1024px )
+		@content
+
+//	Smaller than 768px (Tablet)
+=breakpoint-tablet
+	@media ( max-width: 768px )
+		@content
+
+//	Smaller than 425px (Mobile S320-M375-L425)
+=breakpoint-mobile
+	@media ( max-width: 425px )
+		@content

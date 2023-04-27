@@ -1,0 +1,26 @@
+@use '../../styles/tokens' as *
+
+.button
+	+text-style-buttons
+	text-align: center
+	padding: 1.15rem 2.85rem
+	border-radius: .7rem
+	display: block
+	margin: 0 auto
+	+breakpoint-mobile
+		+text-style-buttons-small
+		padding: .85em 1.3em
+		min-width: 144px 
+	&:hover
+		+transition
+	&-cta
+		background: var(--background-button-cta)
+		&:hover
+			background: var(--background-button-cta-hover)
+		&-text
+			color: var(--color-text-cta)
+	&-side
+		background: var(--background-button-side)
+		color: $color-accent-white
+		&:hover
+			background: var(--background-button-side-hover)

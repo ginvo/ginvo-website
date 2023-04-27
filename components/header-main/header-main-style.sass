@@ -1,0 +1,70 @@
+@use '../../styles/tokens' as *
+
+.header-main-content
+	width: auto
+	display: grid
+	grid-template-columns: 1fr auto 1fr
+	align-items: center
+	padding: 1.7em 0
+	@include breakpoint-tablet
+		grid-template-columns: 1fr auto
+
+.group-logo
+	display: flex
+	align-items: center
+.header-main-nav
+	height: 100%
+	ul
+		height: 100%
+		display: grid
+		grid-auto-flow: column
+		column-gap: 2.2em
+		li
+			display: inline-block
+			height: 100%
+			a
+				display: flex
+				width: 100%
+				height: 100%
+				align-items: center
+				+text-style-menu
+				color: var(--color-text-link)
+				&:hover
+					color: var(--color-text-link-hover)
+					+transition
+	+breakpoint-tablet
+		display: none
+.header-group-icons
+	display: grid
+	grid-auto-flow: column //Descomentar cuando aparezca el segundo item
+	justify-content: end //Descubrí como cambia de items a content
+	column-gap: 2.2em //Descomentar cuando aparezca el segundo item
+	@include breakpoint-tablet
+		:nth-child(1).button-icon-box
+			display: none
+		
+.logo
+	font-size: $font-size-20px
+	font-weight: $font-medium
+	letter-spacing: -.04em
+	a
+		color: $color-dark-90
+
+=icon-state-grey-to-purp
+	a
+		svg
+			fill: $color-gray-60
+		&:hover svg
+			fill: $color-main-50
+			+transition
+
+.icon-link-box
+	width: 24px
+	height: 24px
+	a
+		display: block
+		width: 100%
+		height: 100%
+
+.icon-grey-to-purp
+	+icon-state-grey-to-purp
