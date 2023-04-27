@@ -1,0 +1,55 @@
+@use '../../styles/tokens' as *
+
+.feature-content
+	background: var(--background-section)
+	width: 324px
+	display: grid
+	grid-auto-flow: row
+	border-radius: 10px 
+	+breakpoint-tablet
+		grid-auto-flow: row
+		row-gap: 16px
+		justify-items: center
+
+.icon-box
+	width: 70px
+	height: 70px
+	background-color: $color-accent-white
+	// mask-image: url(../../public/img/token/box.svg)
+	//&:hover
+	//	background-color: $color-accent-white-20
+	//	+transition
+	+flex-content-center
+	+breakpoint-mobile
+		width: 50px
+		height: 50px
+	svg
+		width: 36px
+		height: auto
+		+breakpoint-mobile
+			width: 25px
+		path
+			fill: $color-accent-white
+
+.feature-group-texts
+	text-align: left
+	display: grid
+	grid-auto-flow: row
+	row-gap: 4px
+	padding: 24px
+	+breakpoint-tablet
+		text-align: center
+
+.feature-title
+	color: var(--color-text-title)
+	@include text-style-body
+	font-weight: $font-semibold
+	+breakpoint-mobile
+		+text-style-title-small
+
+.feature-description
+	@include text-style-note
+	color: var(--color-text-body)
+	+breakpoint-tablet
+		margin: 0 auto
+		max-width: 180px

@@ -1,0 +1,49 @@
+@use 'colors' as *
+@use 'fonts' as *
+@use 'mixins' as *
+@use 'breakpoints' as *
+@use "animations" as *
+
+.layout
+	margin: 0 auto
+	padding: 0 40px
+	+typography-style
+	+max-width-desktop
+	+breakpoint-tablet
+		padding: 0 16px
+
+//	==========================================================================
+	5. Utilities - These things get used a lot
+
+.hide
+	display: none
+.space
+	height: 40px
+
+.pill-sky
+	padding: .5em 1em
+	background-color: $color-sky-10
+	color: $color-sky
+	border-radius: 2em
+	p
+		font-size: $font-size-12px
+		line-height: 1.3
+
+.button-icon-box
+	width: 40px
+	height: 40px
+	background-color: var(--icon-box)
+	// mask-image: url(../../public/img/token/box.svg)
+	cursor: pointer
+	&:hover
+		background-color: var(--icon-box-hover)
+		+transition
+	a
+		+flex-content-center
+		width: 100%
+		height: 100%
+		> svg path
+			fill: var(--icon)
+		.icon-color-purp
+			path
+				fill: $color-base-50

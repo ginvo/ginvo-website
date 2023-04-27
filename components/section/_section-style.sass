@@ -1,0 +1,72 @@
+@use '../../styles/tokens' as *
+
+.section-container
+	display: grid
+	grid-auto-flow: row
+	row-gap: 40px
+	padding: 120px 0
+	border-radius: 40px
+	+breakpoint-tablet
+		border-radius: 20px 20px 0 0
+		padding: 56px 0
+		row-gap: 56px
+	&-background
+		background: var(--background-section)
+		border: 1px solid var(--border)
+
+.section-group-texts
+	text-align: center
+	display: grid
+	grid-auto-flow: row
+	row-gap: 16px
+
+.section-title
+	color: var(--color-text-title)
+	&-color
+		color: var(--color-text-title)
+	margin: 0 auto
+	+text-style-h2
+	+breakpoint-mobile
+		+text-style-h2-small
+
+.section-description
+	margin: 0 auto
+	+text-style-body
+	color: var(--color-text-body)
+	+breakpoint-mobile
+		max-width: 260px
+
+.features-group
+	display: grid
+	grid-template-columns: repeat(auto-fill, minmax(324px, 1fr))
+	row-gap: 120px
+	justify-items: center
+	padding: 0 64px
+	+breakpoint-tablet
+		grid-template-columns: repeat(auto-fill, minmax(260px, 1fr))
+		row-gap: 56px
+		padding: 0
+	:nth-child(1) .icon-box
+		background-color: #F0DCFF
+		> svg path
+			fill: #AF48FF
+	:nth-child(2) .icon-box
+		background-color: #D7DEF7
+		> svg path
+			fill: #5460FE
+	:nth-child(3) .icon-box
+		background-color: #FFEADE
+		> svg path
+			fill: #FF612F
+	:nth-child(4) .icon-box
+		background-color: #FFE4E4
+		> svg path
+			fill: #FF3F3F
+	:nth-child(5) .icon-box
+		background-color: #D8EDFF
+		> svg path
+			fill: #40AAFF
+	:nth-child(6) .icon-box
+		background-color: #DDF3E6
+		> svg path
+			fill: #4CCC81

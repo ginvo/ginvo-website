@@ -1,0 +1,118 @@
+@use 'colors' as *
+@use 'breakpoints' as *
+
+//	==========================================================================
+	Design Tokens - Set up for atomic elements from design kit as variables
+
+//	Fonts Variables
+
+//	Poppins font from Google
+@import 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
+
+$font: 'Poppins', sans-serif
+$font-size-base: 14px
+$font-ultrablack: 900
+$font-black: 800
+$font-bold: 700
+$font-semibold: 500
+$font-medium: 400
+$font-regular: 300
+$font-light: 200
+$font-size-16px: 1.15rem
+$font-size-18px: 18px
+$font-size-20px: 20px
+$font-size-24px: 24px
+$font-size-40px: 3rem
+$font-size-30px: 2.5rem
+$font-size-32px: 32px
+$font-size-50px: 3.6rem
+$font-size-64px: 64px
+$font-size-12px: .86rem
+$font-size-90px: 90px
+
+@mixin typography-style
+	font-family: $font
+	font-size: $font-size-base
+	color: var(--color-text-body)
+
+@mixin text-style-h1
+	font-size: $font-size-90px
+	font-weight: $font-black
+	font-style: normal
+	line-height: 1.15em
+	letter-spacing: -.04em
+	+breakpoint-laptop
+		font-size: 75px
+	+breakpoint-tablet
+		font-size: 50px
+		line-height: 1.2em
+
+@mixin text-style-h1-small
+	font-size: $font-size-24px
+	font-weight: $font-bold
+	font-style: normal
+	line-height: 1.15em
+	letter-spacing: -.04em
+
+@mixin text-style-h2
+	font-size: $font-size-64px
+	font-weight: $font-bold
+	font-style: normal
+	line-height: 1.15em
+	letter-spacing: -.04em
+	+breakpoint-laptop
+		font-size: 50px
+
+@mixin text-style-h2-small
+	font-size: $font-size-20px
+	font-weight: $font-bold
+	font-style: normal
+	line-height: 1.15em
+	letter-spacing: -.04em
+
+@mixin text-style-title
+	font-size: $font-size-32px
+	font-weight: $font-bold
+	font-style: normal
+	line-height: 1.15em
+	letter-spacing: -.04em
+	+breakpoint-laptop
+		font-size: 20px
+
+@mixin text-style-title-small
+	font-size: $font-size-18px
+	font-weight: $font-bold
+	font-style: normal
+	line-height: 1.15em
+	letter-spacing: -.04em
+
+@mixin text-style-body
+	font-size: $font-size-18px
+	font-weight: $font-medium
+	font-style: normal
+	line-height: 1.6em
+	// description
+
+@mixin text-style-buttons
+	font-size: $font-size-18px
+	font-weight: $font-medium
+	font-style: normal
+	line-height: 1.5em
+
+@mixin text-style-buttons-small
+	font-size: $font-size-base
+	font-weight: $font-medium
+	font-style: normal
+	line-height: 1.5em
+
+@mixin text-style-menu
+	font-size: $font-size-18px
+	font-weight: $font-medium
+	font-style: normal
+	line-height: 1.5em
+
+@mixin text-style-note
+	font-size: $font-size-base
+	font-weight: $font-regular
+	font-style: normal
+	line-height: 1.6em
