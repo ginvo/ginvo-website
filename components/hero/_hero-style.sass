@@ -43,3 +43,11 @@
 	color: var(--color-text-body-bg)
 	+breakpoint-mobile
 		max-width: 260px
+.feature-group-lite
+	display: grid
+	grid-auto-flow: column
+	column-gap: 40px
+	+breakpoint-tablet
+		grid-auto-flow: row
+		row-gap: 16px
+		justify-items: center
