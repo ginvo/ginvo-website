@@ -1,4 +1,8 @@
 import ButtonCta from "../button/button-cta"
+import FeatureLite from "../feature/feature-lite"
+import IconLineDocuments from "../../public/img/icons/documents.svg"
+import IconLinePlug from "../../public/img/icons/plug.svg"
+import IconLineMagicwand from "../../public/img/icons/magicwand.svg"
 
 const Hero = (props) => {
 	return (
@@ -19,6 +23,20 @@ const Hero = (props) => {
 				<div className='hero-group-buttons'>
 					<ButtonCta
 						text='Avísame cuando estés listo'
+					/>
+				</div>
+				<div className="feature-group-lite">
+					<FeatureLite
+						icon={<IconLineDocuments/>}
+						title='Facturas ilimitadas'
+					/>
+					<FeatureLite
+						icon={<IconLinePlug/>}
+						title='Integrado a SII'
+					/>
+					<FeatureLite
+						icon={<IconLineMagicwand/>}
+						title='Fácil de usar'
 					/>
 				</div>
 			</main>
