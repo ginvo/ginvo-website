@@ -1,8 +1,9 @@
-import ButtonCta from "../button/button-cta"
+// import ButtonCta from "../button/button-cta"
 import FeatureLite from "../feature/feature-lite"
 import IconLineDocuments from "../../public/img/icons/documents.svg"
 import IconLinePlug from "../../public/img/icons/plug.svg"
 import IconLineMagicwand from "../../public/img/icons/magicwand.svg"
+import InputWaitlist from "../input-waitlist/input-waitlist"
 
 const Hero = (props) => {
 	return (
@@ -21,9 +22,7 @@ const Hero = (props) => {
 					</p>
 				</div>
 				<div className='hero-group-buttons'>
-					<ButtonCta
-						text='Avísame cuando estés listo'
-					/>
+					<InputWaitlist />
 				</div>
 				<div className="feature-group-lite">
 					<FeatureLite

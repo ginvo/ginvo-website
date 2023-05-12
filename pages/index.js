@@ -34,9 +34,9 @@ export default function Home() {
             title2="Disfruta facturar"
             body="Soy Ginvo y quiero ser el facturador con el que disfrutes crear facturas electrónicas para tus clientes."
           />
-          <SectionFeature
+          {/* <SectionFeature
             title1='Emite facturas más rápido'
-          />
+          /> */}
           <div className='space'></div>
         </div>
       </div>
