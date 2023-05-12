@@ -1,0 +1,31 @@
+@use '../../styles/tokens' as *
+
+.form-waitlist
+	background: var(--background-section)
+	display: grid
+	grid-auto-flow: column
+	column-gap: 10px
+	align-items: center
+	border-radius: 20px
+	padding: 8px
+.contain-input
+	height: 100%
+	position: relative
+	& figure
+		position: absolute
+		top: 54%
+		transform: translateY(-50%)
+		left: 12px
+		& svg path
+			fill: var(--color-text-body)
+input
+	background: transparent
+	border: none
+	height: 100%
+	+text-style-body
+	color: white
+	&:focus
+		outline: none
+	&[type=email]
+		padding-left: 48px
+		width: 300px

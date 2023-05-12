@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useSupabaseClient } from "@supabase/auth-helpers-react"
+import IconEnvelope from "../../public/img/icons/envelope.svg"
 
 const InputWaitlist = () => {
     const [loading, setLoading] = useState(false)
@@ -26,12 +27,15 @@ const InputWaitlist = () => {
 
     return (
         <>
-            <div className="contain">
+            <div className="contain-waitlist">
                 <form
-                    className="waitlist"
+                    className="form-waitlist"
                     onSubmit={handleSignup}
                 >
-                    <div>
+                    <div className="contain-input">
+                        <figure>
+                            <IconEnvelope />
+                        </figure>
                         <input
                             className="input"
                             name="email"
@@ -42,7 +46,7 @@ const InputWaitlist = () => {
                         />
                     </div>
                     <button
-                        className="button button-cta"
+                        className="button button-medium button-cta"
                         type="submit"
                         disabled={loading}
                     >
